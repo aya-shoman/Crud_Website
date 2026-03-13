@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">  
+         <div>
+        <label for="productname">Product Name</label>
+        <input id="productname" type="text" name="product name">
+        <div class="error" id="nameError"></div>
+        </div>
+     <div>
+        <label for="productprice">Product Price</label>
+        <input id="productprice" type="number" name="product price" min="1000">
+        <div class="error" id="priceError"></div>
+    </div>
+     <div>
+    <label for="productcategory">Product Category</label>
+    <input id="productcategory" list="categorylist" type="text" name="product category">
+    <div class="error" id="categoryError"></div>
+
+    <datalist id="categorylist">
+        <option value="TV">
+        <option value="Iphone">
+        <option value="Samsung">
+    </datalist>
+      </div>
+          <div>
+        <label for="productdescription">Product Description</label>
+        <textarea rows="5" id="productdescription" type="text" name="product description"></textarea> 
+        </div>
+        <div>
+            <input accept="image/*" id="productimage" type="file">
+        </div>
+
+        <button id="addBtn" onclick="addproduct()" class="addbtn">Add Product</button>
+        <button id="updateBtn" onclick="Updateproduct()" class="updatebtn d-none">Update Product</button>
+    </div>
+    <div class="search">
+        <input oninput="searchproduct()" type="search" placeholder="search by name...." id="searchinput">
+    </div>
+    <div class="products" id="rowData">
+    </div>
+ <script src="index.js"></script>
+</body>
+</html>
